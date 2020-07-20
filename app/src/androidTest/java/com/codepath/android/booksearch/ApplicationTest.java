@@ -27,7 +27,6 @@ public class ApplicationTest {
     @Rule
     public ActivityTestRule<BookListActivity> activityRule = new ActivityTestRule<>(BookListActivity.class);
 
-
     @Test
     public void check_BookListActivity() {
         onView(allOf(instanceOf(TextView.class),
