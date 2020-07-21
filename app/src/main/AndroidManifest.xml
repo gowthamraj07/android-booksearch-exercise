@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codepath.android.booksearch" >
+    package="com.codepath.android.booksearch">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -8,10 +8,8 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name=".activities.BookListActivity"
-            android:label="@string/app_name" >
+        android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar">
+        <activity android:name=".activities.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,14 +17,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activities.BookListActivity"
+            android:label="@string/app_name"/>
+        <activity
             android:name=".activities.BookDetailActivity"
             android:label="@string/title_activity_book_detail"
-            android:parentActivityName=".activities.BookListActivity"/>
-
+            android:parentActivityName=".activities.BookListActivity" />
         <activity
             android:name=".activities.VersionActivity"
             android:label="@string/title_activity_version"
-            android:parentActivityName=".activities.BookListActivity"/>
+            android:parentActivityName=".activities.BookListActivity" />
     </application>
 
 </manifest>
