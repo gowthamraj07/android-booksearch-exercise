@@ -1,5 +1,6 @@
 package com.codepath.android.booksearch.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -48,6 +49,9 @@ public class BookListActivity extends AppCompatActivity {
                         BookListActivity.this,
                         "An item at position " + position + " clicked!",
                         Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(BookListActivity.this, BookDetailActivity.class);
+                        startActivity(intent);
 
                 // Handle item click here:
                 // Create Intent to start BookDetailActivity
