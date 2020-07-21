@@ -1,13 +1,19 @@
 package com.codepath.android.booksearch.activities;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.bumptech.glide.Glide;
 import com.codepath.android.booksearch.R;
+
+import static com.codepath.android.booksearch.activities.BookListActivity.AUTHOR;
+import static com.codepath.android.booksearch.activities.BookListActivity.COVER_URL;
+import static com.codepath.android.booksearch.activities.BookListActivity.TITLE;
 
 public class BookDetailActivity extends AppCompatActivity {
     private ImageView ivBookCover;
@@ -18,10 +24,27 @@ public class BookDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_detail);
+
+        Bundle bundle = getIntent().getExtras();
+        String title = bundle.getString(TITLE);
+        String author = bundle.getString(AUTHOR);
+        String coverUrl = bundle.getString(COVER_URL);
+
         // Fetch views
         ivBookCover = (ImageView) findViewById(R.id.ivBookCover);
         tvTitle = (TextView) findViewById(R.id.tvTitle);
         tvAuthor = (TextView) findViewById(R.id.tvAuthor);
+
+        tvTitle.setText(title);
+        tvAuthor.setText(author);
+
+        Glide
+                .with(this)
+                .load(coverUrl)
+                .centerCrop()
+                .placeholder(R.drawable.books_background)
+                .into(ivBookCover);
+
 
         // Extract book object from intent extras
 

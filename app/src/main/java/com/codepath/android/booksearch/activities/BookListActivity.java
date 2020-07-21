@@ -58,8 +58,13 @@ public class BookListActivity extends AppCompatActivity {
                 bundle.putString(TITLE, book.getTitle());
                 bundle.putString(AUTHOR, book.getAuthor());
                 bundle.putString(COVER_URL, book.getCoverUrl());
+
                 Intent intent = new Intent(BookListActivity.this, BookDetailActivity.class);
-                startActivity(intent, bundle);
+                intent.putExtra(TITLE, book.getTitle());
+                intent.putExtra(AUTHOR, book.getAuthor());
+                intent.putExtra(COVER_URL, book.getCoverUrl());
+
+                startActivity(intent);
 
                 // Handle item click here:
                 // Create Intent to start BookDetailActivity
