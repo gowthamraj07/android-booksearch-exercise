@@ -27,6 +27,9 @@ import okhttp3.Headers;
 
 
 public class BookListActivity extends AppCompatActivity {
+    public static final String TITLE = "title";
+    public static final String AUTHOR = "author";
+    public static final String COVER_URL = "coverUrl";
     private RecyclerView rvBooks;
     private BookAdapter bookAdapter;
     private BookClient client;
@@ -50,8 +53,13 @@ public class BookListActivity extends AppCompatActivity {
                         "An item at position " + position + " clicked!",
                         Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(BookListActivity.this, BookDetailActivity.class);
-                        startActivity(intent);
+                Bundle bundle = new Bundle();
+                Book book = abooks.get(position);
+                bundle.putString(TITLE, book.getTitle());
+                bundle.putString(AUTHOR, book.getAuthor());
+                bundle.putString(COVER_URL, book.getCoverUrl());
+                Intent intent = new Intent(BookListActivity.this, BookDetailActivity.class);
+                startActivity(intent, bundle);
 
                 // Handle item click here:
                 // Create Intent to start BookDetailActivity
