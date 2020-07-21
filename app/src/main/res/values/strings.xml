@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">BookSearch</string>
+    <string name="login">Login</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">App Version</string>
     <string name="title_activity_book_detail">BookDetailActivity</string>
