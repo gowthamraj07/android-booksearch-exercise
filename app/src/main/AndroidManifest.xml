@@ -20,13 +20,13 @@
         </activity>
         <activity
             android:name=".activities.BookDetailActivity"
-            android:label="@string/title_activity_book_detail" >
-        </activity>
+            android:label="@string/title_activity_book_detail"
+            android:parentActivityName=".activities.BookListActivity"/>
 
         <activity
             android:name=".activities.VersionActivity"
-            android:label="@string/title_activity_version" >
-        </activity>
+            android:label="@string/title_activity_version"
+            android:parentActivityName=".activities.BookListActivity"/>
     </application>
 
 </manifest>
