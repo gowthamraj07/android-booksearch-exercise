@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,7 @@ public class BookListActivity extends AppCompatActivity {
     public static final String AUTHOR = "author";
     public static final String COVER_URL = "coverUrl";
     private RecyclerView rvBooks;
+    private ProgressBar progressBar;
     private BookAdapter bookAdapter;
     private BookClient client;
     private ArrayList<Book> abooks;
@@ -41,6 +43,7 @@ public class BookListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book_list);
 
         rvBooks = findViewById(R.id.rvBooks);
+        progressBar = findViewById(R.id.progressBar);
         abooks = new ArrayList<>();
 
         // Initialize the adapter
@@ -91,6 +94,8 @@ public class BookListActivity extends AppCompatActivity {
                 try {
                     JSONArray docs;
                     if (response != null) {
+                        progressBar.setVisibility(View.GONE);
+                        rvBooks.setVisibility(View.VISIBLE);
                         // Get the docs json array
                         docs = response.jsonObject.getJSONArray("docs");
                         // Parse json array into array of model objects
