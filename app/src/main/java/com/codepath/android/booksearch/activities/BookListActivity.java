@@ -116,6 +116,8 @@ public class BookListActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(int statusCode, Headers headers, String responseString, Throwable throwable) {
+                progressBar.setVisibility(View.GONE);
+                rvBooks.setVisibility(View.VISIBLE);
                 // Handle failed request here
                 Log.e(BookListActivity.class.getSimpleName(),
                         "Request failed with code " + statusCode + ". Response message: " + responseString);
