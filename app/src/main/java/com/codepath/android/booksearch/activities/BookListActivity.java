@@ -53,11 +53,7 @@ public class BookListActivity extends AppCompatActivity {
                         "An item at position " + position + " clicked!",
                         Toast.LENGTH_SHORT).show();
 
-                Bundle bundle = new Bundle();
                 Book book = abooks.get(position);
-                bundle.putString(TITLE, book.getTitle());
-                bundle.putString(AUTHOR, book.getAuthor());
-                bundle.putString(COVER_URL, book.getCoverUrl());
 
                 Intent intent = new Intent(BookListActivity.this, BookDetailActivity.class);
                 intent.putExtra(TITLE, book.getTitle());
