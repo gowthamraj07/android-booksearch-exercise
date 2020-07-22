@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net" modified="2020-07-22T06:40:38.116Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" etag="IGFmxLZe58v4k29h1fe9" version="13.4.9" type="github">
+  <diagram id="6wYPi2yt_My6mKfW1Drv" name="Page-1">
+    <mxGraphModel dx="786" dy="447" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XbUno3PzkTyu8Zmd8_FE-9" value="Push to remote" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XbUno3PzkTyu8Zmd8_FE-1" target="XbUno3PzkTyu8Zmd8_FE-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XbUno3PzkTyu8Zmd8_FE-1" value="Android Application" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XbUno3PzkTyu8Zmd8_FE-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XbUno3PzkTyu8Zmd8_FE-2" target="XbUno3PzkTyu8Zmd8_FE-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XbUno3PzkTyu8Zmd8_FE-11" value="Updates the code" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XbUno3PzkTyu8Zmd8_FE-10" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XbUno3PzkTyu8Zmd8_FE-2" value="Android Studio" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XbUno3PzkTyu8Zmd8_FE-12" value="Triggers &lt;br&gt;via &lt;br&gt;WebHook" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XbUno3PzkTyu8Zmd8_FE-3" target="XbUno3PzkTyu8Zmd8_FE-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XbUno3PzkTyu8Zmd8_FE-3" value="GitHub" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XbUno3PzkTyu8Zmd8_FE-13" value="Run&lt;br&gt;UI&lt;br&gt;TestCases" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XbUno3PzkTyu8Zmd8_FE-4" target="XbUno3PzkTyu8Zmd8_FE-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XbUno3PzkTyu8Zmd8_FE-4" value="Jenkins CI-CD" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XbUno3PzkTyu8Zmd8_FE-5" value="Emulator" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="610" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
