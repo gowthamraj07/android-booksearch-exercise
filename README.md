@@ -14,6 +14,7 @@ The app does the following:
 3. Build an array of `Book` objects and notify the adapter to display the new data. 
 4. Define a view holder so the adapter can render each book model. 
 
+
 To achieve this, there are four different components in this app:
 
 1. `BookClient` - Responsible for executing the API requests and retrieving the JSON
