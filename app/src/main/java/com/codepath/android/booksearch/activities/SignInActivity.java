@@ -33,4 +33,9 @@ public class SignInActivity extends AppCompatActivity implements SignInView {
     public void showError() {
 
     }
+
+    @Override
+    public void navigateToBookList() {
+
+    }
 }

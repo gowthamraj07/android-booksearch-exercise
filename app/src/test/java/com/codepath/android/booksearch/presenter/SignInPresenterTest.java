@@ -30,4 +30,10 @@ public class SignInPresenterTest {
         Mockito.verify(view).showError();
     }
 
+    @Test
+    public void shouldNavigateToBookListScreenWhenCredentialsAreValid() {
+        presenter.signInWith("admin", "admin");
+
+        Mockito.verify(view).navigateToBookList();
+    }
 }
