@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,11 +15,15 @@ import com.codepath.android.booksearch.view.SignInView;
 
 public class SignInActivity extends AppCompatActivity implements SignInView {
 
+    private TextView invalidCredentials;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
+        invalidCredentials = findViewById(R.id.tvErrorMessage);
+        invalidCredentials.setVisibility(View.GONE);
         final SignInPresenter presenter = new SignInPresenter(SignInActivity.this);
         final EditText userName = findViewById(R.id.tvUserName);
         final EditText password = findViewById(R.id.tvPassword);
@@ -33,12 +38,17 @@ public class SignInActivity extends AppCompatActivity implements SignInView {
 
     @Override
     public void showError() {
-
+        invalidCredentials.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void navigateToBookList() {
         Intent intent = new Intent(SignInActivity.this, BookListActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void hideError() {
+        invalidCredentials.setVisibility(View.GONE);
     }
 }
