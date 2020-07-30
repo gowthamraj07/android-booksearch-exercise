@@ -21,7 +21,6 @@ import org.hamcrest.CoreMatchers.instanceOf
 import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.TypeSafeMatcher
-import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -44,7 +43,7 @@ class BookActivityUITest {
     }
 
     @Test
-    @Ignore("Failing test case -> check with ananth")
+    //@Ignore("Failing test case -> check with ananth")
     fun shouldNavigateToDetailActivityWhen15ItemClicked() {
         Thread.sleep(5000)
         getListItemAt(15).swipeDown()
