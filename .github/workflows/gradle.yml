@@ -13,12 +13,10 @@ jobs:
     runs-on: macOS
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
+    - name: Trigger Jenkins Webhook
+      uses: gowthamraj07/jenkins-action@master
       with:
-        java-version: 1.8
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
+        url: "http://localhost:8080"
+        user: "gowthamraj07"
+        token: "11ca13be67e3954c2f03a81456b1834661"
+        job: "Android-CI-CD-POC"
