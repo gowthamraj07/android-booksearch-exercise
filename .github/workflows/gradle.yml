@@ -11,9 +11,4 @@ jobs:
     runs-on: macOS
     steps:
     - name: Trigger Jenkins Webhook
-      uses: appleboy/jenkins-action@master
-      with:
-        url: "http://localhost:8080"
-        user: "gowthamraj07"
-        token: "11ca13be67e3954c2f03a81456b1834661"
-        job: "Android-CI-CD-POC"
+      run: github-actions.sh
