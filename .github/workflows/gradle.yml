@@ -11,4 +11,4 @@ jobs:
     runs-on: macOS
     steps:
     - name: Trigger Jenkins Webhook
-      run: github-actions.sh
+      run: ~/github-actions.sh
