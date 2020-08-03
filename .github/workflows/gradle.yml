@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Gradle
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
 
-name: Java CI with Gradle
+name: Trigger Local Jenkins
 on:
   push:
     branches: [ master ]
@@ -10,5 +10,5 @@ jobs:
   build:
     runs-on: macOS
     steps:
-    - name: Trigger Jenkins Webhook
+    - name: Trigger Shell script to trigger Jenkins job
       run: ~/github-actions.sh
