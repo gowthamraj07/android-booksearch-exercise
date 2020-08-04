@@ -20,14 +20,14 @@ public class SignInActivity extends AppCompatActivity implements SignInView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_login);
 
         invalidCredentials = findViewById(R.id.tvErrorMessage);
         invalidCredentials.setVisibility(View.GONE);
         final SignInPresenter presenter = new SignInPresenter(SignInActivity.this);
-        final EditText userName = findViewById(R.id.tvUserName);
-        final EditText password = findViewById(R.id.tvPassword);
-        Button btnSignIn = findViewById(R.id.btnSignIn);
+        final EditText userName = findViewById(R.id.et_email);
+        final EditText password = findViewById(R.id.et_password);
+        Button btnSignIn = findViewById(R.id.btn_login);
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
