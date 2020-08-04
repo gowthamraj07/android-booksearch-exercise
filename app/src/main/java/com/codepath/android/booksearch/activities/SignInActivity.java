@@ -27,6 +27,10 @@ public class SignInActivity extends AppCompatActivity implements SignInView {
         final SignInPresenter presenter = new SignInPresenter(SignInActivity.this);
         final EditText userName = findViewById(R.id.et_email);
         final EditText password = findViewById(R.id.et_password);
+
+        userName.setText("admin");
+        password.setText("admin");
+
         Button btnSignIn = findViewById(R.id.btn_login);
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override

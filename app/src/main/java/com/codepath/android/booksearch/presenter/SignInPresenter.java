@@ -14,6 +14,7 @@ public class SignInPresenter {
         if ("admin".equals(loginId) && "admin".equals(password)) {
             view.hideError();
             view.navigateToBookList();
+            return;
         }
         view.showError();
     }
