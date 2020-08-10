@@ -11,4 +11,4 @@ jobs:
     runs-on: macOS
     steps:
     - name: Trigger Shell script to trigger Jenkins job
-      run: ~/github-actions.sh
+      run: ~/github-actions/github-actions.sh
